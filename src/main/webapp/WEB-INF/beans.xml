@@ -25,13 +25,14 @@
     <bean class="org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer"/>
 
     <camelContext id="userServiceContext" trace="false" xmlns="http://camel.apache.org/schema/spring">
-
+        <routeBuilder ref="scheduledEventProducer" />
     </camelContext>
 
 
     <jaxrs:server id="services" address="/">
         <jaxrs:serviceBeans>
             <bean class="de.phienor.camel.embedded.user.UserService"/>
+            <bean class="de.phienor.camel.embedded.EventService"/>
         </jaxrs:serviceBeans>
         <jaxrs:providers>
             <bean class="org.codehaus.jackson.jaxrs.JacksonJsonProvider"/>

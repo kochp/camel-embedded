@@ -15,6 +15,7 @@ public class User implements Serializable{
     private String lastName;
     private String city;
     private String street;
+    private String email;
 
     public String getFirstName() {
         return firstName;
@@ -46,5 +47,13 @@ public class User implements Serializable{
 
     public void setStreet(String street) {
         this.street = street;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

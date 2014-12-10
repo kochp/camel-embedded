@@ -31,7 +31,6 @@
 
     <jaxrs:server id="services" address="/">
         <jaxrs:serviceBeans>
-            <bean class="de.phienor.camel.embedded.HelloWorld"/>
             <bean class="de.phienor.camel.embedded.user.UserService"/>
         </jaxrs:serviceBeans>
         <jaxrs:providers>
